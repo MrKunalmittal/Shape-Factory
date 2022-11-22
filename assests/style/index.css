@@ -109,10 +109,12 @@ h2 {
     cursor: pointer;
 }
 
-.data>p {
+.data>p,.data-1>p {
     width: 150px;
     height: 50px;
     place-items: center;
     color: #fff;
     font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
 }

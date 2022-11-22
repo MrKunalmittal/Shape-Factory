@@ -25,13 +25,16 @@ const colors = select('.colors');
 const button = select('.btn');
 const grid = select('.grid');
 const data = select('.data p');
+const dataOne = select('.data-1 p');
 
 const arrrayOfShapes = [];
 
 
 
 onEvent('click' ,button, function(){
-    if(arrrayOfShapes.length < 24){
+    if(arrrayOfShapes.length > 23){
+        return;
+    }
         const shape = new Shapes();
 
         shape.name = shapes.value;
@@ -42,17 +45,16 @@ onEvent('click' ,button, function(){
         
         grid.appendChild(box);
         arrrayOfShapes.push(box);
-    } else {
-        data.innerText = 'Container is full';
-    }
+    // } else {
+    //     data.innerText = 'Container is full';
+    // }
 
-    // onEvent('click', box, function(){
-    //     data.innerText= arrrayOfShapes.indexOf(box) + 1;
-    // });
+    onEvent('click', box, function(){
+        
+        dataOne.innerText = `${arrrayOfShapes.indexOf(box) + 1}`;
+    });
     
 });
-onEvent('click', box, function(){
-    data.innerText= arrrayOfShapes.indexOf(box) + 1;
-    console.log('hello');
-});
+
+
 
