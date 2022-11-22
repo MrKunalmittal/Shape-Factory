@@ -1,0 +1,118 @@
+@import './reset.css';
+
+:root {
+    --app-dark-bg: #1a1d28;
+    --app-red: #ff3c57;
+    --app-green: #33ab4e;
+    --app-purple: #833cff;
+    --app-orange: #ff833c;
+    --app-blue: #3c57ff;
+    --app-blue-hover: #364ee6;
+}
+
+body {
+    background-color: var(--app-dark-bg);
+    height: 100vh;
+}
+
+.container {
+    width: min(100% - 30px, 1280px);
+    margin-inline: auto;
+}
+
+.center {
+    display: grid;
+    place-items: center;
+    margin-top: 30px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    place-items: center;
+    text-align: center;
+    margin-top: 20px;
+    width: 70%;
+    height: 30px;
+}
+
+.colors,
+.shapes {
+    height: 50px;
+    background-color: lightgray;
+    border-radius: 5px;
+    font-weight: 550;
+    font-size: 17px;
+}
+
+.shapes {
+    width: 25%;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.colors {
+    width: 25%;
+    text-align: center;
+}
+
+.shapes:hover{
+    background-color: #fff;
+    font-weight: 700;
+}
+.colors:hover{
+    background-color: #fff;
+}
+
+.btn {
+    width: 20%;
+    height: 50px;
+    background-color: var(--app-orange);
+    border-radius: 8px;
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 550;
+}
+.btn:hover{
+    background-color: var(--app-red) ;
+}
+
+.grid {
+    background-color: #383838;
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(6, 100px);
+    gap: 10px;
+    margin-top: 40px;
+    border-radius: 3px;
+    height: 460px;
+    width: 55%;
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.circle {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.data>p {
+    width: 150px;
+    height: 50px;
+    place-items: center;
+    color: #fff;
+    font-size: 20px;
+}
