@@ -33,8 +33,7 @@ const arrrayOfShapes = [];
 
 onEvent('click' ,button, function(){
     if(arrrayOfShapes.length < 24){
-    //     return;
-    // }
+  
         let shape2 = new Shapes (colors.value,shapes.value);
 
         // shape.name = shapes.value;
