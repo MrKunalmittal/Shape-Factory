@@ -21,7 +21,7 @@ class Shapes {
     }
 
     getInfo() {
-        return `${this._name} ${this._color}`;
+        return `${this._name} ${this._colour}`;
     }
     
 

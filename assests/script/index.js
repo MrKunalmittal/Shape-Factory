@@ -32,27 +32,30 @@ const arrrayOfShapes = [];
 
 
 onEvent('click' ,button, function(){
-    if(arrrayOfShapes.length > 23){
-        return;
-    }
-        const shape = new Shapes();
+    if(arrrayOfShapes.length < 24){
+    //     return;
+    // }
+        let shape2 = new Shapes (colors.value,shapes.value);
 
-        shape.name = shapes.value;
+        // shape.name = shapes.value;
 
-        const box = document.createElement("div");
-        box.classList.add(shape.name);
+        let box = document.createElement("div");
+        box.classList.add(shapes.value);
         box.style.backgroundColor = optionColors[colors.value];
         
+        arrrayOfShapes.push(shape2);
         grid.appendChild(box);
-        arrrayOfShapes.push(box);
-    // } else {
-    //     data.innerText = 'Container is full';
-    // }
+        onEvent('click', box, function(){
+            console.log('hello')
+            dataOne.innerText = `Info: ${arrrayOfShapes.indexOf(shape2) + 1} ${shape2.getInfo()}`;
+        });
+    } else {
+        data.innerText = 'Container is full';
+    }
 
-    onEvent('click', box, function(){
-        
-        dataOne.innerText = `${arrrayOfShapes.indexOf(box) + 1}`;
-    });
+
+   
+
     
 });
 
